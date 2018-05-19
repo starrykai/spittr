@@ -1,3 +1,5 @@
+package spittr.web;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -18,7 +20,7 @@ public class WebConfig  extends WebMvcConfigurerAdapter{
     public ViewResolver viewResolver(){
         //配置JSP视图解析器
         InternalResourceViewResolver resourceViewResolver = new InternalResourceViewResolver();
-        resourceViewResolver.setPrefix("/WEB-INF/views");
+        resourceViewResolver.setPrefix("/WEB-INF/views/");
         resourceViewResolver.setSuffix(".jsp");
         return resourceViewResolver;
     }
